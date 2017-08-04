@@ -1,0 +1,56 @@
+{
+  "_args": [
+    [
+      "react-native-google-cast@1.3.0",
+      "/Users/ndillon/Apps/dce-mobile"
+    ]
+  ],
+  "_from": "github:ndillon1/chromecast-v3",
+  "_id": "react-native-google-cast@1.3.0",
+  "_inBundle": false,
+  "_integrity": "sha1-NZNeXnQnLuyU6IQpVpMIQXUpx+E=",
+  "_location": "/react-native-google-cast",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "ndillon1/chromecast-v3",
+    "rawSpec": "ndillon1/chromecast-v3",
+    "saveSpec": "github:ndillon1/chromecast-v3",
+    "fetchSpec": null,
+    "gitCommittish": "master"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "github:ndillon1/chromecast-v3#6bdb0b1d6cddc822ee203f8a3931859ea9a2a89f",
+  "_spec": "ndillon1/chromecast-v3",
+  "_where": "/Users/ndillon/Apps/dce-mobile",
+  "author": {
+    "name": "Charlie L",
+    "email": "carlyeah@me.com"
+  },
+  "bugs": {
+    "url": "https://github.com/charliesbox/react-native-google-cast/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Chromecast library for iOS and Android",
+  "homepage": "https://github.com/charliesbox/react-native-google-cast#readme",
+  "keywords": [
+    "react-native",
+    "ios",
+    "android",
+    "chromecast",
+    "google",
+    "cast"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "react-native-google-cast",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/charliesbox/react-native-google-cast.git"
+  },
+  "version": "1.3.0"
+}
