@@ -54,7 +54,7 @@ RCT_EXPORT_METHOD(startScan)
           [self emitMessageToRN:DEVICE_AVAILABLE
           :@{@"device_available": @YES}];
           [self emitMessageToRN:DEVICES_UPDATED :@{@"devices": self.deviceList}];
-          
+
       }
   });
 }
@@ -82,10 +82,10 @@ RCT_EXPORT_METHOD(connectToDevice:(NSString *)deviceId)
 {
   RCTLogInfo(@"connecting to device %@", deviceId);
   GCKDevice *selectedDevice = self.currentDevices[deviceId];
-    
+
   dispatch_async(dispatch_get_main_queue(), ^{
     self.deviceManager = [[GCKDeviceManager alloc] initWithDevice:selectedDevice
-                                                clientPackageName:[NSBundle mainBundle].bundleIdentifier];
+                                                clientPackageName:[NSBundle mainBundle].bundleIdentifier ignoreAppStateNotifications:YES];
     self.deviceManager.delegate = self;
     [_deviceManager connect];
   });
@@ -221,14 +221,14 @@ RCT_REMAP_METHOD(getStreamPosition,
     self.currentDevices[device.deviceID] = device;
     [self.deviceList addObject:singleDevice];
     [self emitMessageToRN:DEVICES_UPDATED :@{@"devices": self.deviceList}];
-  
+
 }
 
 - (void) removeDevice: (NSUInteger)index {
 //    int num = (int)index;
     NSArray *keys = [self.currentDevices allKeys];
     id key = [keys objectAtIndex:index];
-    
+
     [self.currentDevices removeObjectForKey: key];
     [self.deviceList removeObjectAtIndex:index];
     [self emitMessageToRN:DEVICES_UPDATED :@{@"devices": self.deviceList}];
