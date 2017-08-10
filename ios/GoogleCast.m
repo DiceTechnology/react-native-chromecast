@@ -50,7 +50,7 @@ RCT_EXPORT_METHOD(startScan)
     [_discoveryManager addListener:self];
     [_discoveryManager startDiscovery];
     [_discoveryManager setPassiveScan:NO];
-      if(self.discoveryManager.deviceCount > 0) {
+      if(self.discoveryManager.deviceCount > 0 && self.deviceList) {
           [self emitMessageToRN:DEVICE_AVAILABLE
           :@{@"device_available": @YES}];
           [self emitMessageToRN:DEVICES_UPDATED :@{@"devices": self.deviceList}];
