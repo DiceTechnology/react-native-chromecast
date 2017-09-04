@@ -2,8 +2,6 @@ import { NativeModules, requireNativeComponent } from 'react-native';
 
 const { GoogleCast } = NativeModules;
 
-console.log(GoogleCast);
-
 export default {
   startScan: function () {
 	GoogleCast.startScan();
